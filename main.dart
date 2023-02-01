@@ -18,7 +18,7 @@ void main() {
 // 이때 에러가 발생.=> 만약에 age나 name이나 country중에 값을 안주면 어쩔거야?
 // 여기서 두가지 방법이 있음.
 // 1번은 값을 직접 할당해 놓는 것.(default값 설정)
-//  => 이것이 바로 named argument
+//  //=> 이것이 바로 named argument
 // ex) String sayHello2({String name = 'hoho',  int age = 2,  String country ='korea'})
 // 2번은 required modifier
 // ex) String sayHello2({required String name, required int age, required String country})
