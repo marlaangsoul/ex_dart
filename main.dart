@@ -1,10 +1,63 @@
 // =============================================
-//3.1 Named Parameters(void main 바깥에 있음).
+//3.5 Typedef (void main 바깥에 있음).
+
 
 // =============================================
 
 void main() {
   
+  // =============================================
+//3.4 QQ Operator(void main 바깥에 있음).
+// ??
+// 소문자를 대문자로 바꿔주는 함수
+// name 값이 null 일때 방법 1.
+// String capitalizeName(String? name) => 
+//   name != null ? name.toUpperCase() : 'ANOW';
+// name 값이 null이 아닐때 방법 2.
+// String capitalizeName2(String? name) => 
+//   name?.toUpperCase() ?? 'ANOW';
+// 설명
+// left ?? right
+// 만약 좌항이 null이면 우항을 리턴
+// 만약 좌항이 null이 아니면 좌항을 리턴
+
+// =============================================
+
+  
+//   capitalizeName('lbh');
+//   capitalizeName(null); // 이걸 사용할때 String에 ? 처리
+//   capitalizeName2('lbh');
+//   capitalizeName2(null);
+
+  
+// ?=
+//   String? name;
+//   name ??= 'lbh';
+//   print(name);
+//   ??= 만약 name이 null 값이라면, name 값은 'lbh'로 해줘
+
+  // =============================================
+//3.3 Optional Positional Parameters(void main 바깥에 있음).
+// Positional Parameter 란
+// sayHello(1,2,3); 와 같이 각각 name이면 name, 순서면 순서에 맞게
+// 위치를 잡아서 사용하는 것
+// Optional Parameters
+// String sayHello(
+//   String name,
+//   int age,
+//   [String? country = 'korea']
+// ) =>
+//     'Hello $name, you are $age, and you com frome $country';
+// 옵션널 파라메터는 위의 함수의 파라메터 중 하나의 값에
+// String이 ?null 값일수도 있어, 이럴때는 String? contry를
+// 'korea'라고 설정해.
+// 형태로 null 값이 될 수 있는 값에 기본값을 설정해 놓는 방식
+
+// =============================================
+
+//   var result = sayHello('bh', 12);
+//   print(result);
+
   // =============================================
 //3.1 Named Parameters(void main 바깥에 있음).
 //플러터에서 자주 사용 되는 개념
@@ -18,14 +71,13 @@ void main() {
 // 이때 에러가 발생.=> 만약에 age나 name이나 country중에 값을 안주면 어쩔거야?
 // 여기서 두가지 방법이 있음.
 // 1번은 값을 직접 할당해 놓는 것.(default값 설정)
-//  //=> 이것이 바로 named argument
+//  => 이것이 바로 named argument
 // ex) String sayHello2({String name = 'hoho',  int age = 2,  String country ='korea'})
 // 2번은 required modifier
 // ex) String sayHello2({required String name, required int age, required String country})
 
 // =============================================
 
-  
 //   print(sayHello(
 //     'hoho',
 //     12,
